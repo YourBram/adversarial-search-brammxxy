@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Strategic Stone Battle</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Strategic Stone Battle</h1>
+
+<p class="subtitle">
+Human vs AI using Minimax & Alpha-Beta Pruning
+</p>
+
+<div class="card">
+
+<h2>Stones Remaining</h2>
+
+<div id="stoneCount">
+15
+</div>
+
+<div id="status">
+Your Turn
+</div>
+
+<div class="controls">
+
+<button onclick="playerMove(1)">
+Take 1
+</button>
+
+<button onclick="playerMove(2)">
+Take 2
+</button>
+
+<button onclick="playerMove(3)">
+Take 3
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>AI Settings</h2>
+<label>
+    First turn
+</label>
+
+<select>
+    <option value="random" selected>Random</option>
+    <option value="human">Human</option>
+    <option value="ai">AI</option>
+</select>
+
+<label>
+    Difficulty
+</label>
+
+<select id="difficulty">
+    <option value="easy">Easy</option>
+     <option value="medium" selected>Medium</option>
+     <option value="hard">Hard</option>
+</select>
+
+<label>
+Algorithm
+</label>
+
+<select id="algorithm">
+<option value="minimax">
+Minimax
+</option>
+
+<option value="alphabeta">
+Alpha-Beta
+</option>
+</select>
+
+<label>
+Depth
+</label>
+
+<select id="depth">
+
+<option>1</option>
+<option>2</option>
+<option selected>3</option>
+<option>4</option>
+<option>5</option>
+
+</select>
+
+</div>
+
+<div class="card">
+
+<h2>Statistics</h2>
+
+<p>
+Nodes Evaluated:
+<span id="nodes">
+0
+</span>
+</p>
+
+<p>
+Current Algorithm:
+<span id="currentAlgo">
+Minimax
+</span>
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Game Tree Preview</h2>
+
+<pre id="tree">
+
+15
+├──14
+├──13
+└──12
+
+</pre>
+
+</div>
+
+<button class="restart" onclick="restartGame()">
+Restart Game
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
